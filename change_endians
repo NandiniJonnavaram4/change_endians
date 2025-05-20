@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() 
+{
+    int num = 0x22883344;
+    num = ((num & 0xff000000) >> 24) | 
+          ((num & 0x00ff0000) >> 8)  | 
+          ((num & 0x0000ff00) << 8)  | 
+          ((num & 0x000000ff) << 24);
+    printf("Num=0x%X\n", num);  
+    return 0;
+}
